@@ -1,0 +1,39 @@
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n            <option value=\"$PROJECT_DIR$/pickerview\" />\r\n            <option value=\"$PROJECT_DIR$/wheelview\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision 9c7d7beddb0ec4c16755d10bd66725ee7ee9434c)
++++ .idea/gradle.xml	(date 1616135079671)
+@@ -16,6 +16,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/SjAndroid.iml\" filepath=\"$PROJECT_DIR$/SjAndroid.iml\" group=\"SjAndroid\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/modules/wheelview/SjAndroid-wheelview.iml\" filepath=\"$PROJECT_DIR$/.idea/modules/wheelview/SjAndroid-wheelview.iml\" group=\"SjAndroid/wheelview\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/app/app.iml\" filepath=\"$PROJECT_DIR$/app/app.iml\" group=\"SjAndroid/app\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/pickerview/pickerview.iml\" filepath=\"$PROJECT_DIR$/pickerview/pickerview.iml\" group=\"SjAndroid/pickerview\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/wheelview/wheelview.iml\" filepath=\"$PROJECT_DIR$/wheelview/wheelview.iml\" group=\"SjAndroid/wheelview\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 9c7d7beddb0ec4c16755d10bd66725ee7ee9434c)
++++ .idea/modules.xml	(date 1616136826469)
+@@ -2,11 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/SjAndroid.iml" filepath="$PROJECT_DIR$/SjAndroid.iml" group="SjAndroid" />
+       <module fileurl="file://$PROJECT_DIR$/.idea/modules/wheelview/SjAndroid-wheelview.iml" filepath="$PROJECT_DIR$/.idea/modules/wheelview/SjAndroid-wheelview.iml" group="SjAndroid/wheelview" />
+-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SjAndroid/app" />
+-      <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" group="SjAndroid/pickerview" />
+-      <module fileurl="file://$PROJECT_DIR$/wheelview/wheelview.iml" filepath="$PROJECT_DIR$/wheelview/wheelview.iml" group="SjAndroid/wheelview" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
