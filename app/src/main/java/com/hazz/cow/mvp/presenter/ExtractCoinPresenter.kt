@@ -1,0 +1,63 @@
+package com.hazz.cow.mvp.presenter
+
+
+import android.util.Pair
+import com.hazz.cow.mvp.contract.IContractView
+import com.hazz.cow.mvp.model.ExtractRecord
+import com.hazz.cow.net.*
+import com.hazz.cow.utils.Utils
+
+
+class ExtractCoinPresenter(view: IContractView.TibiView) : BasePresenter<IContractView.TibiView>(view) {
+
+    fun tibi(amount: String, coin: String, trade_password: String, external_wallet_address: String
+    ) {
+
+
+        val body = RequestUtils.getBody(
+
+                Pair.create<Any, Any>("amount", amount),
+                Pair.create<Any, Any>("coin", coin),
+                Pair.create<Any, Any>("trade_password", Utils.encryptMD5(trade_password)),
+                Pair.create<Any, Any>("external_wallet_address", external_wallet_address)
+
+        )
+
+
+        val login = RetrofitManager.service.tibi(body)
+
+        doRequest(login, object : Callback<Any>(view) {
+            override fun failed(tBaseResult: BaseResult<Any>): Boolean {
+
+                return false
+            }
+
+            override fun success(tBaseResult: BaseResult<Any>) {
+                view.tibiSucceed(tBaseResult.msg
+                )
+            }
+
+        }, true)
+
+    }
+
+    fun tibiRecord(){
+
+
+        val login = RetrofitManager.service.tibiRecord()
+
+        doRequest(login, object : Callback<ExtractRecord>(view) {
+            override fun failed(tBaseResult: BaseResult<ExtractRecord>): Boolean {
+
+                return false
+            }
+
+            override fun success(tBaseResult: BaseResult<ExtractRecord>) {
+                view.tibiRecord(tBaseResult.data!!)
+            }
+
+        }, true)
+
+    }
+
+}

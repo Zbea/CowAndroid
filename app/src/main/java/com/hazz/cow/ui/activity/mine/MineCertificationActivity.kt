@@ -1,0 +1,50 @@
+package com.hazz.cow.ui.activity.mine
+
+import android.content.Intent
+import androidx.appcompat.widget.Toolbar
+import com.hazz.cow.R
+import com.hazz.cow.base.BaseActivity
+import com.hazz.cow.ui.fragment.MineCertificationOneFragment
+import com.hazz.cow.utils.ToolBarCustom
+import kotlinx.android.synthetic.main.activity_charge.*
+
+class MineCertificationActivity : BaseActivity() {
+
+    override fun layoutId(): Int {
+        return R.layout.activity_mine_certification
+    }
+
+    override fun initView() {
+        ToolBarCustom.newBuilder(mToolBar as Toolbar)
+                .setTitle("实名认证")
+                .setOnLeftIconClickListener { finish() }
+    }
+
+    override fun initData() {
+
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.fl_content, MineCertificationOneFragment().newInstance())
+                .commitAllowingStateLoss()
+
+    }
+
+    override fun start() {
+    }
+
+
+    /**
+     * 解决Fragment中的onActivityResult()方法无响应问题。
+     */
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        /**
+         * 1.使用getSupportFragmentManager().getFragments()获取到当前Activity中添加的Fragment集合
+         * 2.遍历Fragment集合，手动调用在当前Activity中的Fragment中的onActivityResult()方法。
+         */
+        for (mFragment in supportFragmentManager.fragments) {
+            mFragment.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+
+}

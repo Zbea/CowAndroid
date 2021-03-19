@@ -27,7 +27,7 @@
                 android:layout_margin="@dimen/space_dimen"
                 android:padding="@dimen/dp_15"
                 android:gravity="center"
-                android:background="@drawable/bg_main_solid_5dp_coner"
+                android:background="@drawable/bg_main_solid_10dp_coner_graddient"
                 android:orientation="vertical">
 
                 <ImageView

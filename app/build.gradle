@@ -18,7 +18,7 @@ android {
         config {
             keyAlias 'aipick'
             keyPassword '123456'
-            storeFile file('E:\\AndroidStudioSpace\\sj\\SjAndroid\\pick.jks')
+            storeFile file('E:\\AndroidStudioSpace\\cow\\CowAndroid\\pick.jks')
             storePassword '123456'
         }
     }
@@ -29,7 +29,7 @@ android {
 
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {
-        applicationId "com.hazz.kuangji"
+        applicationId "com.hazz.cow"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -75,7 +75,8 @@ android {
     // 自定义输出配置
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "kuangji${variant.versionName}_${variant.name}.apk"
+            outputFileName = "Cow" +
+                    "${variant.versionName}_${variant.name}.apk"
         }
     }
 
@@ -156,7 +157,7 @@ dependencies {
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 //腾讯 bugly
     implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
-    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+//    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 //运行时权限
     implementation 'pub.devrel:easypermissions:1.2.0'
 

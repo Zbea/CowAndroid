@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SjAndroid.iml" filepath="$PROJECT_DIR$/SjAndroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SjAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SjAndroid.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pickerview/SjAndroid.pickerview.iml" filepath="$PROJECT_DIR$/.idea/modules/pickerview/SjAndroid.pickerview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wheelview/SjAndroid.wheelview.iml" filepath="$PROJECT_DIR$/.idea/modules/wheelview/SjAndroid.wheelview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CowAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/CowAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CowAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CowAndroid.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pickerview/CowAndroid.pickerview.iml" filepath="$PROJECT_DIR$/.idea/modules/pickerview/CowAndroid.pickerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wheelview/CowAndroid.wheelview.iml" filepath="$PROJECT_DIR$/.idea/modules/wheelview/CowAndroid.wheelview.iml" />
     </modules>
   </component>
 </project>

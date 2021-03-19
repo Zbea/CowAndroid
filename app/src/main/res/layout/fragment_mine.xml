@@ -23,6 +23,7 @@
             android:layout_marginTop="@dimen/dp_40"
             android:layout_marginRight="@dimen/dp_20"
             android:src="@mipmap/icon_mine_skin"
+            android:visibility="gone"
             />
 
         <LinearLayout
@@ -108,60 +109,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:id="@+id/ll_buy"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:visibility="gone"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/icon_mine_buy" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:text="一键买币"
-                        android:textColor="@color/color_mine_btn"
-                        android:textSize="@dimen/sp_14" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/ll_sale"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:visibility="gone"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/icon_mine_transfer_coin" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:text="账户互转"
-                        android:textColor="@color/color_mine_btn"
-                        android:textSize="@dimen/sp_14" />
-
-                </LinearLayout>
-            </LinearLayout>
 
 
 

@@ -3,13 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_launch"
     >
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif"
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       />
-
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_launch"/>
 
 </LinearLayout>

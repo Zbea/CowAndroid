@@ -134,7 +134,7 @@
             android:layout_marginBottom="@dimen/dp_20"
             android:gravity="center"
             android:textColor="@color/color_white"
-            android:text="+购买增值服务"
+            android:text="+添加理财产品"
             android:background="@drawable/bg_main_solid_arc"
             android:textSize="@dimen/sp_14"
             />

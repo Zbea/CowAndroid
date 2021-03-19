@@ -13,9 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:singleLine="true"
-        android:text="开启矿机"
+        android:text="牛牛矿机"
         android:textColor="@color/color_333333"
-        android:textSize="14sp" />
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_16" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,54 +29,45 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp_5"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="矿机类型：Fil矿机"
-                android:textColor="@color/color_999999"
-                android:textSize="12sp" />
             <TextView
                 android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_5"
-                android:text="合约周期：5年"
+                android:text="服务周期：5年"
                 android:textColor="@color/color_999999"
-                android:textSize="12sp" />
+                android:textSize="@dimen/sp_12" />
 
             <TextView
-                android:id="@+id/tv_suanli"
+                android:id="@+id/tv_earnings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="矿机算力：1G"
-                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginTop="7dp"
+                android:text="每日收益：不低于全网平均值"
                 android:textColor="@color/color_999999"
-                android:textSize="12sp"
-                android:visibility="gone" />
+                android:textSize="@dimen/sp_12" />
 
             <TextView
-                android:id="@+id/tv_amount"
+                android:id="@+id/tv_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0 USDT"
-                android:visibility="gone"
-                android:layout_marginTop="@dimen/dp_5"
+                android:text="其他费用：质押、gas费"
+                android:layout_marginTop="7dp"
                 android:textColor="@color/color_999999"
-                android:textSize="12sp" />
+                android:textSize="@dimen/sp_12" />
 
             <TextView
                 android:id="@+id/tv_zu"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_30"
+                android:layout_width="73dp"
+                android:layout_height="28dp"
                 android:background="@drawable/bg_main_solid_10dp_coner"
-                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
                 android:gravity="center"
                 android:text="抢购"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/sp_14" />
+                android:textSize="@dimen/sp_16" />
 
         </LinearLayout>
         <ImageView

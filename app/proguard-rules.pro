@@ -51,7 +51,7 @@
 # Gson
 -keep class com.google.gson.stream.** { *; }
 -keepattributes EnclosingMethod
--keep class com.hazz.kuangji.mvp.model.**{*;}
+-keep class com.hazz.cow.mvp.model.**{*;}
 
 -dontwarn javax.annotation.Nullable
 -dontwarn javax.annotation.ParametersAreNonnullByDefault
