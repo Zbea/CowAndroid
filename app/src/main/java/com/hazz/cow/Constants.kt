@@ -40,13 +40,13 @@ class Constants private constructor() {
 
         const val BUGLY_ID="9e19916e51"
 
-        const val URL_NEW_BASE = "http://192.168.1.116:5000/"
-        const val URL_BASE = "http://192.168.1.116/api/"
-        const val URL_INVITE = "http://192.168.1.116/"
+//        const val URL_NEW_BASE = "http://192.168.1.116:5000/"
+//        const val URL_BASE = "http://192.168.1.116/api/"
+//        const val URL_INVITE = "http://192.168.1.116/"
 
-//        const val URL_NEW_BASE = "http://8.140.144.249:5000/"
-//        const val URL_BASE = "http://8.140.144.249/api/"
-//        const val URL_INVITE = "http://8.140.144.249/"
+        const val URL_NEW_BASE = "http://8.140.144.249:5000/"
+        const val URL_BASE = "http://8.140.144.249/api/"
+        const val URL_INVITE = "http://8.140.144.249/"
 
         const val URL_DOWNLOAD = "$URL_INVITE#/about"
     }

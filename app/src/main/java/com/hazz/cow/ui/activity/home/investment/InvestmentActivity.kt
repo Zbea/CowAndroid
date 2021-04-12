@@ -1,9 +1,11 @@
 package com.hazz.cow.ui.activity.home.investment
 
 import android.content.Intent
+import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.chad.library.adapter.base.BaseQuickAdapter
 import com.hazz.cow.Constants
 import com.hazz.cow.R
 import com.hazz.cow.base.BaseActivity
@@ -42,8 +44,8 @@ InvestmentActivity : BaseActivity(), IContractView.IInvestmentView {
     private var mAdapter: InvestmentAdapter? = null
     private var mAdapterCompleted: InvestmentCompletedAdapter? = null
     private var pageNuming = 1
-    private var pageNumed = "1"
-    private var pageSize="20"
+    private var pageNumed = 1
+    private var pageSize=20
     private var item: Investment? = null
     private var mPasswordDialog: SafeCheckDialog? = null
     private var pos=0
@@ -55,18 +57,39 @@ InvestmentActivity : BaseActivity(), IContractView.IInvestmentView {
     override fun getLists(item: Investment) {
         this.item = item
         tv_fil.text = if (item.amount.isNullOrEmpty()) "0 FIL" else item.amount+"FIL"
-        mAdapter?.setNewData(item.list)
-//        if (item.list.size<20)
-//        {
-//            mAdapter?.loadMoreEnd()
-//        }
-//        else{
-//            mAdapter?.loadMoreComplete()
-//        }
+        if (pageNuming==1)
+        {
+            mAdapter?.setNewData(item.list)
+        }
+        else
+        {
+            mAdapter?.addData(item.list)
+        }
+        if (item.list.size<pageSize)
+        {
+            mAdapter?.loadMoreEnd(true)
+        }
+        else{
+            mAdapter?.loadMoreComplete()
+        }
     }
 
     override fun getListsCompleted(item: Investment) {
-        mAdapterCompleted?.setNewData(item.list)
+        if (pageNumed==1)
+        {
+            mAdapterCompleted?.setNewData(item.list)
+        }
+        else
+        {
+            mAdapterCompleted?.addData(item.list)
+        }
+        if (item.list.size<pageSize)
+        {
+            mAdapterCompleted?.loadMoreEnd(true)
+        }
+        else{
+            mAdapterCompleted?.loadMoreComplete()
+        }
     }
 
     override fun onSuccess() {
@@ -155,11 +178,15 @@ InvestmentActivity : BaseActivity(), IContractView.IInvestmentView {
             }
 
         }
-//
-//        mAdapter?.setOnLoadMoreListener {
-//            pageNuming++
-//            mInvestmentPresenter.getLists(pageNuming.toString())
-//        }
+        mAdapter?.setOnLoadMoreListener(BaseQuickAdapter.RequestLoadMoreListener {
+            rc_list.postDelayed(Runnable {
+                var size = mAdapter?.data?.size
+                if (pageNuming * pageSize == size) {
+                    pageNuming+=1
+                    mInvestmentPresenter.getLists(pageNuming.toString())
+                }
+            }, 1000)
+        }, rc_list)
 
 
         rc_listed.layoutManager = LinearLayoutManager(this)//创建布局管理
@@ -167,12 +194,20 @@ InvestmentActivity : BaseActivity(), IContractView.IInvestmentView {
         rc_listed.adapter = mAdapterCompleted
         mAdapterCompleted?.bindToRecyclerView(rc_listed)
         rc_listed.addItemDecoration(RewardItemDeco(0, 0, 0, leftRightOffset, 0))
-
+        mAdapterCompleted?.setOnLoadMoreListener(BaseQuickAdapter.RequestLoadMoreListener {
+            rc_listed.postDelayed(Runnable {
+                var size = mAdapterCompleted?.data?.size
+                if (pageNumed * pageSize == size) {
+                    pageNumed+=1
+                    mInvestmentPresenter.getListsCompleted(pageNumed.toString())
+                }
+            }, 1000)
+        }, rc_listed)
     }
 
     override fun start() {
         mInvestmentPresenter.getLists(pageNuming.toString())
-        mInvestmentPresenter.getListsCompleted(pageNumed)
+        mInvestmentPresenter.getListsCompleted(pageNumed.toString())
     }
 
 

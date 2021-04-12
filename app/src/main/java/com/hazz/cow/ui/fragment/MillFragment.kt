@@ -2,6 +2,7 @@
 package com.hazz.cow.ui.fragment
 
 import android.content.Intent
+import android.util.Log
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hazz.cow.R
@@ -98,6 +99,5 @@ class MillFragment : BaseFragment(), IContractView.kuangjiView {
     override fun lazyLoad() {
         mMillPresenter.kuangji()
     }
-
 
 }

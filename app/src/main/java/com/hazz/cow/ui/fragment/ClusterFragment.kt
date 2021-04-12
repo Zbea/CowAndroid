@@ -35,22 +35,21 @@ class ClusterFragment : BaseFragment() ,IContractView.IAssetClusterView{
     private var mAdapter: AssetClusterAdapter? = null
     private var page=1
     private var assetCluster: AssetCluster?=null
-    private var tv:TextView?=null
 
     override fun getCluster(msg: AssetCluster) {
         assetCluster=msg
         sl_refresh?.isRefreshing = false
         if (mView!=null)
         {
-            tv?.text=msg.total_storage
-            tv_seal_storage.text=msg.seal_storage
-            tv_seal_add.text=msg.seal_add
-            tv_release_fil.text=msg.release_fil
-            tv_day_t_fil.text=msg.day_t_fil
-            tv_day_coinage_fil.text=msg.day_coinage_fil
-            tv_unrelease_fil.text=msg.unrelease_fil
-            tv_pledge_fil.text=msg.pledge_fil
-            tv_day.text=msg.round
+            tv_total_storage?.text=msg.total_storage
+            tv_seal_storage?.text=msg.seal_storage
+            tv_seal_add?.text=msg.seal_add
+            tv_release_fil?.text=msg.release_fil
+            tv_day_t_fil?.text=msg.day_t_fil
+            tv_day_coinage_fil?.text=msg.day_coinage_fil
+            tv_unrelease_fil?.text=msg.unrelease_fil
+            tv_pledge_fil?.text=msg.pledge_fil
+            tv_day?.text=msg.round
         }
     }
 
@@ -91,8 +90,6 @@ class ClusterFragment : BaseFragment() ,IContractView.IAssetClusterView{
 
     override fun initView() {
         EventBus.getDefault().register(this)
-
-        tv=activity?.findViewById(R.id.tv_total_storage)
 
         var layoutParams: LinearLayout.LayoutParams= toolbar.layoutParams as LinearLayout.LayoutParams
         layoutParams.topMargin= activity?.let { DensityUtils.getStatusBarHeight(it) }!!

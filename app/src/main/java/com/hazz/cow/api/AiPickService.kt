@@ -200,14 +200,6 @@ interface AiPickService{
     fun xieyi(@Query("target")target:String): Observable<BaseResult<Xieyi>>
 
     /**
-     * 签到记录
-     */
-    @GET("trade/sign_records")
-    fun signRecord(): Observable<BaseResult<SignRecord>>
-
-
-
-    /**
      * 实名认证
      */
     @Multipart

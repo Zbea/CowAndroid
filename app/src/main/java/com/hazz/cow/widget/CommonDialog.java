@@ -15,7 +15,7 @@ import com.hazz.cow.utils.DpUtils;
 
 
 /**
- * Created by dell on 2017/10/23.
+ * Created by zbea on 2017/10/23.
  */
 
 public class CommonDialog {

@@ -32,24 +32,5 @@ class ProtocolPresenter(view: IContractView.XieyiView) : BasePresenter<IContract
 
     }
 
-    fun signRecord() {
-
-
-
-        val login = RetrofitManager.service.signRecord()
-
-        doRequest(login, object : Callback<SignRecord>(view) {
-            override fun failed(tBaseResult: BaseResult<SignRecord>): Boolean {
-
-                return false
-            }
-
-            override fun success(tBaseResult: BaseResult<SignRecord>) {
-                view.getSignRecord(tBaseResult.data!!)
-            }
-
-        }, true)
-
-    }
 
 }

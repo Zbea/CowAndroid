@@ -34,9 +34,7 @@ import org.greenrobot.eventbus.ThreadMode
 import java.util.*
 
 
-class
-
-AssetFragment : BaseFragment(), IContractView.AssetView, IContractView.ICertificationInfoView,IContractView.ShouyiView {
+class AssetFragment : BaseFragment(), IContractView.AssetView, IContractView.ICertificationInfoView,IContractView.ShouyiView {
 
     private var mCertification: Certification? = null
     private var mAssetPresenter: AssetPresenter = AssetPresenter(this)
@@ -172,6 +170,7 @@ AssetFragment : BaseFragment(), IContractView.AssetView, IContractView.ICertific
             {
                 mCertificationInfoPresenter.getCertification()
             }
+            mAssetPresenter.myAsset(false)
         }
     }
 

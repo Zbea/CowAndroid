@@ -206,8 +206,8 @@ class ExtractCoinActivity : BaseActivity(), IContractView.TibiView, IContractVie
                         tipsNum=BigDecimalUtil.sub(coin.balance,coin.line25,8)
                     }
                 }
-                tv_tips.text="提币超过$max_fil FIL后将影响您的矿机产出算力"
-                tv_tips.visibility= View.VISIBLE
+//                tv_tips.text="提币超过$max_fil FIL后将影响您的矿机产出算力"
+//                tv_tips.visibility= View.VISIBLE
             }
             et_num.setText("")
             tv_need.text="0"
@@ -253,6 +253,8 @@ class ExtractCoinActivity : BaseActivity(), IContractView.TibiView, IContractVie
             }
         }
     }
+
+
 
     /**
      * 设置费用
